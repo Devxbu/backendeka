@@ -1,0 +1,31 @@
+const Joi = require("joi");
+const ApiError = require("../errors/apiError");
+
+const pick = (object, keys) => {
+  return keys.reduce((obj, key) => {
+    if (object && Object.prototype.hasOwnProperty.call(object, key)) {
+      obj[key] = object[key];
+    }
+    return obj;
+  }, {});
+};
+
+const validate = (schema) => (req, res, next) => {
+  const validSchema = pick(schema, ["params", "query", "body"]);
+  const object = pick(req, Object.keys(validSchema));
+  const { value, error } = Joi.compile(validSchema)
+    .prefs({ errors: { label: "key" }, abortEarly: false })
+    .validate(object);
+
+  if (error) {
+    const errors = error.details.map((details) => ({
+      field: details.context.key,
+      message: details.message.replace(/\"/g, ""),
+    }));
+    return next(new ApiError(400, "Validation Error", true, errors));
+  }
+  Object.assign(req, value);
+  return next();
+};
+
+module.exports = validate;
