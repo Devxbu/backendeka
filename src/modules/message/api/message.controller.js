@@ -1,11 +1,12 @@
 const MessageService = require("../core/message.service");
 const asyncHandler = require("../../../shared/utils/asyncHandler");
+const messageDTO = require("./message.dto");
 
 // Get conversations of a user
 module.exports.getConversations = asyncHandler(async (req, res) => {
   const userId = req.user.userId;
   const conversations = await MessageService.getConversations(userId);
-  res.status(200).json(conversations);
+  res.status(200).json(messageDTO.toList(conversations));
 });
 
 // Get conversation between two users
@@ -15,7 +16,7 @@ module.exports.getConversation = asyncHandler(async (req, res) => {
     userId,
     req.params.id,
   );
-  res.status(200).json(conversation);
+  res.status(200).json(messageDTO.toResponse(conversation));
 });
 
 // Send message
@@ -23,7 +24,7 @@ module.exports.sendMessage = asyncHandler(async (req, res) => {
   const userId = req.user.userId;
   const { receiverId, message } = req.body;
   const result = await MessageService.sendMessage(userId, receiverId, message);
-  res.status(201).json(result);
+  res.status(201).json(messageDTO.toResponse(result));
 });
 
 // Set messages as deleted

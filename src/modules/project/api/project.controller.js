@@ -9,13 +9,13 @@ module.exports.getProjects = catchAsync(async (req, res) => {
     page: parseInt(page) || 1,
   });
 
-  res.status(200).json(projects);
+  res.status(200).json(projectDTO.toList(projects));
 });
 
 module.exports.getProjectById = catchAsync(async (req, res) => {
   const { id } = req.params;
   const project = await projectService.getProject(id, req.user.userId);
-  res.status(200).json(project);
+  res.status(200).json(projectDTO.toResponse(project));
 });
 
 module.exports.snoozeProject = catchAsync(async (req, res) => {
@@ -24,7 +24,7 @@ module.exports.snoozeProject = catchAsync(async (req, res) => {
   const updated = await projectService.updateProject(id, req.user.userId, {
     snoozedEndDate: snoozeDate,
   });
-  res.status(200).json(updated);
+  res.status(200).json(projectDTO.toResponse(updated));
 });
 
 module.exports.acceptProject = catchAsync(async (req, res) => {
@@ -34,7 +34,7 @@ module.exports.acceptProject = catchAsync(async (req, res) => {
     approvedDate: new Date(),
     progress: "in_progress",
   });
-  res.status(200).json(updated);
+  res.status(200).json(projectDTO.toResponse(updated));
 });
 
 module.exports.createProjectRequest = catchAsync(async (req, res) => {
@@ -42,7 +42,7 @@ module.exports.createProjectRequest = catchAsync(async (req, res) => {
     req.user.userId,
     req.body,
   );
-  res.status(201).json(project);
+  res.status(201).json(projectDTO.toResponse(project));
 });
 
 module.exports.updateProject = catchAsync(async (req, res) => {
@@ -52,7 +52,7 @@ module.exports.updateProject = catchAsync(async (req, res) => {
     req.user.userId,
     req.body,
   );
-  res.status(200).json(updated);
+  res.status(200).json(projectDTO.toResponse(updated));
 });
 
 module.exports.deleteProject = catchAsync(async (req, res) => {

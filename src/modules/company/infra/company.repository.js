@@ -27,7 +27,7 @@ class CompanyRepository {
         .sort(sort)
         .limit(limit)
         .skip(skip)
-        .select("name slug pfp bio location categories badges plan")
+        .select("name slug pfp bio location areas plan")
         .lean(),
       Company.countDocuments(query),
     ]);

@@ -14,7 +14,7 @@ module.exports.getNotifications = catchAsync(async (req, res) => {
   const unreadCount = await notificationService.getUnreadCount(req.user.userId);
 
   res.status(200).json({
-    notifications: notifications,
+    notifications: notificationDTO.toList(notifications),
     unreadCount,
   });
 });
@@ -25,7 +25,7 @@ module.exports.getNotification = catchAsync(async (req, res) => {
     id,
     req.user.userId,
   );
-  res.status(200).json(notification);
+  res.status(200).json(notificationDTO.toResponse(notification));
 });
 
 module.exports.markAllAsRead = catchAsync(async (req, res) => {
@@ -35,7 +35,7 @@ module.exports.markAllAsRead = catchAsync(async (req, res) => {
 
 module.exports.createNotification = catchAsync(async (req, res) => {
   const notification = await notificationService.createNotification(req.body);
-  res.status(201).json(notification);
+  res.status(201).json(notificationDTO.toResponse(notification));
 });
 
 module.exports.updateNotification = catchAsync(async (req, res) => {
@@ -44,7 +44,7 @@ module.exports.updateNotification = catchAsync(async (req, res) => {
     id,
     req.body,
   );
-  res.status(200).json(notification);
+  res.status(200).json(notificationDTO.toResponse(notification));
 });
 
 module.exports.deleteNotification = catchAsync(async (req, res) => {

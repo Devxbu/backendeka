@@ -8,7 +8,7 @@ module.exports.createContent = catchAsync(async (req, res) => {
     data.image = req.file;
   }
   const content = await ContentService.createContent(data, req.user.userId);
-  res.status(201).json(content);
+  res.status(201).json(ContentDTO.toResponse(content));
 });
 
 module.exports.getContentByUserId = catchAsync(async (req, res) => {
@@ -18,7 +18,7 @@ module.exports.getContentByUserId = catchAsync(async (req, res) => {
     limit: parseInt(limit) || 10,
     page: parseInt(page) || 1,
   });
-  res.status(200).json(contents);
+  res.status(200).json(ContentDTO.toFeed(contents));
 });
 
 module.exports.updateContent = catchAsync(async (req, res) => {
@@ -28,19 +28,19 @@ module.exports.updateContent = catchAsync(async (req, res) => {
     updateData.image = req.file;
   }
   const content = await ContentService.updateContent(id, updateData);
-  res.status(200).json(content);
+  res.status(200).json(ContentDTO.toResponse(content));
 });
 
 module.exports.likeContent = catchAsync(async (req, res) => {
   const { id } = req.params;
   const content = await ContentService.likeContent(id, req.user.userId);
-  res.status(200).json(content);
+  res.status(200).json(ContentDTO.toResponse(content));
 });
 
 module.exports.saveContent = catchAsync(async (req, res) => {
   const { id } = req.params;
   const content = await ContentService.saveContent(id, req.user.userId);
-  res.status(200).json(content);
+  res.status(200).json(ContentDTO.toResponse(content));
 });
 
 module.exports.deleteContent = catchAsync(async (req, res) => {
@@ -55,5 +55,5 @@ module.exports.getFeed = catchAsync(async (req, res) => {
     limit: parseInt(limit) || 10,
     page: parseInt(page) || 1,
   });
-  res.status(200).json(feed);
+  res.status(200).json(ContentDTO.toFeed(feed));
 });

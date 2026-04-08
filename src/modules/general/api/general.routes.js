@@ -23,13 +23,14 @@ const auth = require("../../../middlewares/auth");
 const authorize = require("../../../middlewares/permission");
 
 // MESSAGES (Public or Auth depending on requirements, usually public for contact form)
-router.post("/send-message", generalController.sendMessage);
+router.post("/send-message", validate(generalValidation.sendMessage), generalController.sendMessage);
 router.get("/get-communities", auth, generalController.getCommunities);
-router.get("/get-community/:id", auth, generalController.getCommunity);
+router.get("/get-community/:id", auth, validate(generalValidation.genericIdParam), generalController.getCommunity);
 router.delete(
   "/delete-community/:id",
   auth,
   authorize("admin"),
+  validate(generalValidation.genericIdParam),
   generalController.deleteCommunity,
 );
 router.post(
@@ -37,6 +38,7 @@ router.post(
   auth,
   authorize("admin"),
   upload.single("image"),
+  validate(generalValidation.createCommunity),
   generalController.createCommunity,
 );
 router.get("/dashboard", auth, generalController.getDashboard);
@@ -49,12 +51,14 @@ router.post(
   "/create-faq",
   auth,
   authorize("admin"),
+  validate(generalValidation.createFaq),
   generalController.createFaq,
 );
 router.delete(
   "/delete-faq/:id",
   auth,
   authorize("admin"),
+  validate(generalValidation.genericIdParam),
   generalController.deleteFaq,
 );
 router.delete(
@@ -67,6 +71,7 @@ router.put(
   "/update-faq/:id",
   auth,
   authorize("admin"),
+  validate(generalValidation.updateFaq),
   generalController.updateFaq,
 );
 router.patch(

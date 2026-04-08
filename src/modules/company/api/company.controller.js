@@ -9,12 +9,12 @@ module.exports.me = catchAsync(async (req, res) => {
     req.user,
   );
   //   res.status(200).json(companyDTO.toPrivateResponse(profile));
-  res.status(200).json(profile);
+  res.status(200).json(companyDTO.toPublicResponse(profile));
 });
 
 module.exports.get = catchAsync(async (req, res) => {
   const profile = await companyService.getProfileById(req.params.id);
-  res.status(200).json(profile);
+  res.status(200).json(companyDTO.toPublicResponse(profile));
 });
 
 module.exports.update = catchAsync(async (req, res) => {
@@ -31,7 +31,7 @@ module.exports.update = catchAsync(async (req, res) => {
     req.user.userId,
     updateData,
   );
-  res.status(200).json(updated);
+  res.status(200).json(companyDTO.toPublicResponse(updated));
 });
 
 module.exports.save = catchAsync(async (req, res) => {
@@ -39,7 +39,7 @@ module.exports.save = catchAsync(async (req, res) => {
     req.user.userId,
     req.params.id,
   );
-  res.status(200).json(updated);
+  res.status(200).json(companyDTO.toPublicResponse(updated));
 });
 
 module.exports.discover = catchAsync(async (req, res) => {
@@ -51,7 +51,7 @@ module.exports.discover = catchAsync(async (req, res) => {
 
   res.status(200).json({
     ...result,
-    results: result.results,
+    results: companyDTO.toList(result.results),
   });
 });
 
@@ -69,7 +69,7 @@ module.exports.browse = catchAsync(async (req, res) => {
 
   res.status(200).json({
     ...result,
-    results: result.results,
+    results: companyDTO.toList(result.results),
   });
 });
 

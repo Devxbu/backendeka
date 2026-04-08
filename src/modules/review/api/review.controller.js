@@ -14,14 +14,14 @@ module.exports.getReview = catchAsync(async (req, res) => {
   const stats = await reviewService.getAverageRating(reviewedUserId);
 
   res.status(200).json({
-    reviews,
+    reviews: reviewDTO.toList(reviews),
     stats,
   });
 });
 
 module.exports.createReview = catchAsync(async (req, res) => {
   const review = await reviewService.createReview(req.body, req.user.userId);
-  res.status(201).json(review);
+  res.status(201).json(reviewDTO.toResponse(review));
 });
 
 module.exports.deleteReview = catchAsync(async (req, res) => {
@@ -33,5 +33,5 @@ module.exports.deleteReview = catchAsync(async (req, res) => {
 module.exports.hideReview = catchAsync(async (req, res) => {
   const { id } = req.params;
   const review = await reviewService.setVisibility(id, req.user.userId);
-  res.status(200).json(review);
+  res.status(200).json(reviewDTO.toResponse(review));
 });

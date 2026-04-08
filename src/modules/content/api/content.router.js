@@ -25,17 +25,19 @@ router.use(authMiddleware);
 router.post(
   "/create-content",
   upload.single("image"),
+  validate(contentValidation.createContent),
   contentController.createContent,
 );
-router.get("/get-user-content/:userId", contentController.getContentByUserId);
+router.get("/get-user-content/:userId", validate(contentValidation.getContentByUserId), contentController.getContentByUserId);
 router.put(
   "/update-content/:id",
   upload.single("image"),
+  validate(contentValidation.updateContent),
   contentController.updateContent,
 );
-router.patch("/like-content/:id", contentController.likeContent);
-router.patch("/save-content/:id", contentController.saveContent);
-router.delete("/delete-content/:id", contentController.deleteContent);
+router.patch("/like-content/:id", validate(contentValidation.getContentById), contentController.likeContent);
+router.patch("/save-content/:id", validate(contentValidation.getContentById), contentController.saveContent);
+router.delete("/delete-content/:id", validate(contentValidation.getContentById), contentController.deleteContent);
 router.get("/feed", contentController.getFeed);
 
 module.exports = router;

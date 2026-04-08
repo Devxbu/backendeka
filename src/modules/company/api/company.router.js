@@ -29,11 +29,11 @@ const authMiddleware = require("../../../middlewares/auth");
 router.use(authMiddleware);
 
 router.get("/me", companyController.me);
-router.get("/discover", companyController.discover);
-router.post("/browse", companyController.browse);
-router.get("/:id", companyController.get);
-router.put("/me", cpUpload, companyController.update);
+router.get("/discover", validate(companyValidation.discover), companyController.discover);
+router.post("/browse", validate(companyValidation.browse), companyController.browse);
+router.get("/:id", validate(companyValidation.getProfile), companyController.get);
+router.put("/me", cpUpload, validate(companyValidation.updateProfile), companyController.update);
 router.delete("/me", companyController.delete);
-router.patch("/save/:id", companyController.save);
+router.patch("/save/:id", validate(companyValidation.saveProfile), companyController.save);
 
 module.exports = router;

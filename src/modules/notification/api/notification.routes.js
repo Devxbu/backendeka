@@ -11,7 +11,7 @@ router.use(auth);
 
 router.get("/get-notifications", notificationController.getNotifications);
 
-router.get("/get-notification/:id", notificationController.getNotification);
+router.get("/get-notification/:id", validate(notificationValidation.getNotification), notificationController.getNotification);
 
 router.patch("/mark-all-as-read", notificationController.markAllAsRead);
 
@@ -19,18 +19,21 @@ router.patch("/mark-all-as-read", notificationController.markAllAsRead);
 router.post(
   "/create-notification",
   authorize("admin"),
+  validate(notificationValidation.createNotification),
   notificationController.createNotification,
 );
 
 router.put(
   "/update-notification/:id",
   authorize("admin"),
+  validate(notificationValidation.updateNotification),
   notificationController.updateNotification,
 );
 
 router.delete(
   "/delete-notification/:id",
   authorize("admin"),
+  validate(notificationValidation.getNotification),
   notificationController.deleteNotification,
 );
 

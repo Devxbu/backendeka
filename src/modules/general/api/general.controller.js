@@ -6,7 +6,7 @@ module.exports.sendMessage = catchAsync(async (req, res) => {
   const message = await generalService.sendMessage(req.body);
   res.status(201).json({
     message: "Message sent successfully",
-    data: message,
+    data: generalDTO.toContactResponse(message),
   });
 });
 
@@ -17,13 +17,13 @@ module.exports.getDashboard = catchAsync(async (req, res) => {
 
 module.exports.getCommunities = catchAsync(async (req, res) => {
   const communities = await generalService.getCommunities();
-  res.status(200).json(communities);
+  res.status(200).json(communities.map(generalDTO.toCommunityResponse));
 });
 
 module.exports.getCommunity = catchAsync(async (req, res) => {
   const { id } = req.params;
   const community = await generalService.getCommunity(id);
-  res.status(200).json(community);
+  res.status(200).json(generalDTO.toCommunityResponse(community));
 });
 
 module.exports.deleteCommunity = catchAsync(async (req, res) => {
@@ -38,13 +38,13 @@ module.exports.createCommunity = catchAsync(async (req, res) => {
     ...(req.file && { image: req.file }),
   };
   const community = await generalService.createCommunity(data);
-  res.status(201).json(community);
+  res.status(201).json(generalDTO.toCommunityResponse(community));
 });
 
 // FAQ
 module.exports.getFaqs = catchAsync(async (req, res) => {
   const faqs = await generalService.getFaqs();
-  res.status(200).json(faqs);
+  res.status(200).json(faqs.map(generalDTO.toFaqResponse));
 });
 
 module.exports.getTopics = catchAsync(async (req, res) => {
@@ -55,7 +55,7 @@ module.exports.getTopics = catchAsync(async (req, res) => {
 module.exports.createFaq = catchAsync(async (req, res) => {
   const { question, answer, topic } = req.body;
   const faq = await generalService.createFaq(question, answer, topic);
-  res.status(201).json(faq);
+  res.status(201).json(generalDTO.toFaqResponse(faq));
 });
 
 module.exports.deleteFaq = catchAsync(async (req, res) => {
@@ -76,7 +76,7 @@ module.exports.deleteTopic = catchAsync(async (req, res) => {
 module.exports.updateFaq = catchAsync(async (req, res) => {
   const { id } = req.params;
   const faq = await generalService.updateFaq(id, req.body);
-  res.status(200).json(faq);
+  res.status(200).json(generalDTO.toFaqResponse(faq));
 });
 
 module.exports.updateTopic = catchAsync(async (req, res) => {

@@ -7948,3 +7948,817 @@
   service: 'general-service',
   timestamp: '2026-04-08T02:23:51.275Z'
 }
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T15:59:48.800Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T15:59:51.629Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T15:59:51.637Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:00:43.579Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:00:46.183Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:00:46.189Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:01:38 +0000] "POST /api/auth/login HTTP/1.1" 200 788 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:01:38.307Z'
+}
+{
+  level: 'error',
+  service: 'general-service',
+  message: "Cannot destructure property 'limit' of 'req.body' as it is undefined.",
+  stack: "TypeError: Cannot destructure property 'limit' of 'req.body' as it is undefined.\n" +
+    '    at /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/src/modules/company/api/company.controller.js:59:11\n' +
+    '    at /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/src/shared/utils/asyncHandler.js:2:19\n' +
+    '    at Layer.handleRequest (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/lib/layer.js:152:17)\n' +
+    '    at next (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/lib/route.js:157:13)\n' +
+    '    at /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/src/shared/middlewares/validate.middleware.js:28:10\n' +
+    '    at Layer.handleRequest (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/lib/layer.js:152:17)\n' +
+    '    at next (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/lib/route.js:157:13)\n' +
+    '    at Route.dispatch (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/lib/route.js:117:3)\n' +
+    '    at handle (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/index.js:435:11)\n' +
+    '    at Layer.handleRequest (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/lib/layer.js:152:17)',
+  timestamp: '2026-04-08T16:03:49.445Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:03:49 +0000] "POST /api/company/browse?industry=music HTTP/1.1" 500 62 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:03:49.453Z'
+}
+{
+  level: 'error',
+  service: 'general-service',
+  message: "Cannot destructure property 'limit' of 'req.body' as it is undefined.",
+  stack: "TypeError: Cannot destructure property 'limit' of 'req.body' as it is undefined.\n" +
+    '    at /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/src/modules/company/api/company.controller.js:59:11\n' +
+    '    at /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/src/shared/utils/asyncHandler.js:2:19\n' +
+    '    at Layer.handleRequest (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/lib/layer.js:152:17)\n' +
+    '    at next (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/lib/route.js:157:13)\n' +
+    '    at /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/src/shared/middlewares/validate.middleware.js:28:10\n' +
+    '    at Layer.handleRequest (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/lib/layer.js:152:17)\n' +
+    '    at next (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/lib/route.js:157:13)\n' +
+    '    at Route.dispatch (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/lib/route.js:117:3)\n' +
+    '    at handle (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/index.js:435:11)\n' +
+    '    at Layer.handleRequest (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/router/lib/layer.js:152:17)',
+  timestamp: '2026-04-08T16:04:02.387Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:04:02 +0000] "POST /api/company/browse HTTP/1.1" 500 62 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:04:02.389Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:05:35 +0000] "POST /api/company/browse HTTP/1.1" 200 1212 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:05:35.010Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:06:09 +0000] "POST /api/company/browse HTTP/1.1" 200 1141 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:06:09.378Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:07:30.230Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:07:34.065Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:07:34.070Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:08:25.419Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:08:27.994Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:08:27.998Z'
+}
+{
+  '$fault': 'client',
+  '$retryable': undefined,
+  '$metadata': {
+    httpStatusCode: 403,
+    requestId: '6PVD51NWGX25BZ53',
+    extendedRequestId: 'A+OnTh92I6h+FhiWQzPDVI1qkXxZ8bmHBmFEvqgRynZhGOP4dDc0n0BSU0Fkk6lq7HNJC8YFB7T2q7XWkKDrJHiFZHnbl17f',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  name: 'AccessDenied',
+  message: 'User: arn:aws:iam::507225111087:user/ekacs-aws-account is not authorized to perform: s3:DeleteObject on resource: "arn:aws:s3:::ekacs-bucket/companies/98951b4a-50e7-466c-ab2f-a0f6f496d73e" with an explicit deny in an identity-based policy',
+  Code: 'AccessDenied',
+  RequestId: '6PVD51NWGX25BZ53',
+  HostId: 'A+OnTh92I6h+FhiWQzPDVI1qkXxZ8bmHBmFEvqgRynZhGOP4dDc0n0BSU0Fkk6lq7HNJC8YFB7T2q7XWkKDrJHiFZHnbl17f',
+  level: 'error',
+  service: 'general-service',
+  stack: 'AccessDenied: User: arn:aws:iam::507225111087:user/ekacs-aws-account is not authorized to perform: s3:DeleteObject on resource: "arn:aws:s3:::ekacs-bucket/companies/98951b4a-50e7-466c-ab2f-a0f6f496d73e" with an explicit deny in an identity-based policy\n' +
+    '    at S3RestXmlProtocol.handleError (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/core/dist-cjs/submodules/protocols/index.js:1842:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async S3RestXmlProtocol.deserializeResponse (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@smithy/core/dist-cjs/submodules/protocols/index.js:337:13)\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@smithy/core/dist-cjs/submodules/schema/index.js:27:24\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:387:20\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@smithy/middleware-retry/dist-cjs/index.js:300:46\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:64:28\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:91:20\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:5:26\n' +
+    '    at async S3Storage.delete (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/src/shared/infra/storage/s3.storage.js:33:5)',
+  timestamp: '2026-04-08T16:09:09.685Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:09:09 +0000] "PUT /api/company/me HTTP/1.1" 500 62 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:09:09.688Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:21:31 +0000] "POST /api/content/create-content HTTP/1.1" 401 73 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:21:31.662Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:21:45 +0000] "POST /api/content/create-content HTTP/1.1" 401 73 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:21:45.305Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:21:46 +0000] "POST /api/content/create-content HTTP/1.1" 401 73 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:21:46.570Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:22:15 +0000] "POST /api/auth/login HTTP/1.1" 200 788 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:22:15.899Z'
+}
+{
+  name: 'MulterError',
+  message: 'Unexpected field',
+  code: 'LIMIT_UNEXPECTED_FILE',
+  field: 'pfp',
+  storageErrors: [],
+  level: 'error',
+  service: 'general-service',
+  stack: 'MulterError: Unexpected field\n' +
+    '    at wrappedFileFilter (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/multer/index.js:41:19)\n' +
+    '    at Multipart.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/multer/lib/make-middleware.js:183:7)\n' +
+    '    at Multipart.emit (node:events:508:28)\n' +
+    '    at HeaderParser.cb (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/busboy/lib/types/multipart.js:358:14)\n' +
+    '    at HeaderParser.push (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/busboy/lib/types/multipart.js:162:20)\n' +
+    '    at SBMH.ssCb [as _cb] (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/busboy/lib/types/multipart.js:394:37)\n' +
+    '    at feed (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/streamsearch/lib/sbmh.js:200:10)\n' +
+    '    at SBMH.push (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/streamsearch/lib/sbmh.js:104:16)\n' +
+    '    at Multipart._write (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/busboy/lib/types/multipart.js:567:19)\n' +
+    '    at writeOrBuffer (node:internal/streams/writable:570:12)',
+  timestamp: '2026-04-08T16:22:20.400Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:22:20 +0000] "POST /api/content/create-content HTTP/1.1" 500 62 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:22:20.402Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:22:52 +0000] "POST /api/content/create-content HTTP/1.1" 201 1257 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:22:52.265Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:22:58 +0000] "PUT /api/content/update-content HTTP/1.1" 404 50 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:22:58.776Z'
+}
+{
+  '$fault': 'client',
+  '$retryable': undefined,
+  '$metadata': {
+    httpStatusCode: 403,
+    requestId: '8P8MWERQXC03V0S2',
+    extendedRequestId: 'RKu37jh6E9dKpeT6RKP9fcG5nVqPqDzBT8i7wR11xyH7I6YfrtiMl33SX94lJE0mjTRXhwwbxdrIW5Mo8y4esuB31CfrS/Ir',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  name: 'AccessDenied',
+  message: 'User: arn:aws:iam::507225111087:user/ekacs-aws-account is not authorized to perform: s3:DeleteObject on resource: "arn:aws:s3:::ekacs-bucket/contents/252dc701-9b45-42a7-b9f9-fcb6d48f9d1a" with an explicit deny in an identity-based policy',
+  Code: 'AccessDenied',
+  RequestId: '8P8MWERQXC03V0S2',
+  HostId: 'RKu37jh6E9dKpeT6RKP9fcG5nVqPqDzBT8i7wR11xyH7I6YfrtiMl33SX94lJE0mjTRXhwwbxdrIW5Mo8y4esuB31CfrS/Ir',
+  level: 'error',
+  service: 'general-service',
+  stack: 'AccessDenied: User: arn:aws:iam::507225111087:user/ekacs-aws-account is not authorized to perform: s3:DeleteObject on resource: "arn:aws:s3:::ekacs-bucket/contents/252dc701-9b45-42a7-b9f9-fcb6d48f9d1a" with an explicit deny in an identity-based policy\n' +
+    '    at S3RestXmlProtocol.handleError (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/core/dist-cjs/submodules/protocols/index.js:1842:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async S3RestXmlProtocol.deserializeResponse (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@smithy/core/dist-cjs/submodules/protocols/index.js:337:13)\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@smithy/core/dist-cjs/submodules/schema/index.js:27:24\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:387:20\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@smithy/middleware-retry/dist-cjs/index.js:300:46\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:64:28\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:91:20\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:5:26\n' +
+    '    at async S3Storage.delete (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/src/shared/infra/storage/s3.storage.js:33:5)',
+  timestamp: '2026-04-08T16:23:26.270Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:23:26 +0000] "PUT /api/content/update-content/69d680dc5a0ff1bd467af0a3 HTTP/1.1" 500 62 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:23:26.273Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:23:38.205Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:23:40.862Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:23:40.869Z'
+}
+{
+  '$fault': 'client',
+  '$retryable': undefined,
+  '$metadata': {
+    httpStatusCode: 403,
+    requestId: 'KDF4G0TT3DZJZWSG',
+    extendedRequestId: 'TnDLM2zOAfyJDMeDOYi7TSo0uo2+hd8MVhICoDZePrPs5qhXZVLbK7wHL/jsChIw4BX+f8Yulf8di4LFywsPAZOrrlVu1xiS',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  name: 'AccessDenied',
+  message: 'User: arn:aws:iam::507225111087:user/ekacs-aws-account is not authorized to perform: s3:DeleteObject on resource: "arn:aws:s3:::ekacs-bucket/contents/252dc701-9b45-42a7-b9f9-fcb6d48f9d1a" with an explicit deny in an identity-based policy',
+  Code: 'AccessDenied',
+  RequestId: 'KDF4G0TT3DZJZWSG',
+  HostId: 'TnDLM2zOAfyJDMeDOYi7TSo0uo2+hd8MVhICoDZePrPs5qhXZVLbK7wHL/jsChIw4BX+f8Yulf8di4LFywsPAZOrrlVu1xiS',
+  level: 'error',
+  service: 'general-service',
+  stack: 'AccessDenied: User: arn:aws:iam::507225111087:user/ekacs-aws-account is not authorized to perform: s3:DeleteObject on resource: "arn:aws:s3:::ekacs-bucket/contents/252dc701-9b45-42a7-b9f9-fcb6d48f9d1a" with an explicit deny in an identity-based policy\n' +
+    '    at S3RestXmlProtocol.handleError (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/core/dist-cjs/submodules/protocols/index.js:1842:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async S3RestXmlProtocol.deserializeResponse (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@smithy/core/dist-cjs/submodules/protocols/index.js:337:13)\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@smithy/core/dist-cjs/submodules/schema/index.js:27:24\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:387:20\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@smithy/middleware-retry/dist-cjs/index.js:300:46\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:64:28\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:91:20\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:5:26\n' +
+    '    at async S3Storage.delete (/Users/bahri/Documents/www/Projects/EKA/EkaCS/backendeka/src/shared/infra/storage/s3.storage.js:33:5)',
+  timestamp: '2026-04-08T16:23:43.353Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:23:43 +0000] "PUT /api/content/update-content/69d680dc5a0ff1bd467af0a3 HTTP/1.1" 500 62 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:23:43.358Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:26:32 +0000] "POST /api/content/create-content/ HTTP/1.1" 201 1257 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:26:32.984Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:26:56.304Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:26:59.067Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:26:59.073Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:27:01 +0000] "POST /api/content/create-content/ HTTP/1.1" 201 1277 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:27:01.993Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:27:20 +0000] "PUT /api/content/update-content/69d681d591a88059e0e63f46 HTTP/1.1" 200 1245 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:27:20.710Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:38:47 +0000] "POST /api/auth/login HTTP/1.1" 200 788 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:38:47.904Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:39:06 +0000] "PUT /api/content/update-content/69d681d591a88059e0e63f46 HTTP/1.1" 200 1245 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:39:06.057Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:39:53 +0000] "PUT /api/content/update-content/69d681d591a88059e0e63f46 HTTP/1.1" 200 1245 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:39:53.285Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:39:58.602Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:40:01.386Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:40:01.391Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:16:40:03 +0000] "PUT /api/content/update-content/69d681d591a88059e0e63f46 HTTP/1.1" 200 1225 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T16:40:03.696Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:39:29.588Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:39:32.597Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:39:32.600Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:19:39:35 +0000] "POST /api/auth/login HTTP/1.1" 200 788 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:39:35.696Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:19:40:02 +0000] "GET /api/projects/get-projects HTTP/1.1" 404 50 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:40:02.761Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:19:40:31 +0000] "GET /api/project/get-projects HTTP/1.1" 200 1410 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:40:31.639Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:41:02.697Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:41:05.529Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:41:05.536Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:41:06.906Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:41:09.505Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:41:09.509Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:41:32.183Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:41:34.782Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:41:34.786Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:19:41:36 +0000] "GET /api/project/get-projects HTTP/1.1" 200 1401 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:41:36.288Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:19:42:07 +0000] "PATCH /api/project/accept-project/69d58c3d14c948419fd40766 HTTP/1.1" 200 1399 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:42:07.130Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:46:25.999Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:46:28.795Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:46:28.802Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:47:38.621Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:47:41.247Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:47:41.254Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:19:48:04 +0000] "PATCH /api/review/get-reviews/69d56d7cc3ab7ad34c619af4 HTTP/1.1" 404 50 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:48:04.129Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:19:48:11 +0000] "PATCH /api/review/get-review/69d56d7cc3ab7ad34c619af4 HTTP/1.1" 404 50 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:48:11.086Z'
+}
+{
+  message: '::1 - - [08/Apr/2026:19:48:15 +0000] "GET /api/review/get-review/69d56d7cc3ab7ad34c619af4 HTTP/1.1" 200 1461 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:48:15.835Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:49:22.441Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:49:25.268Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:49:25.277Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:50:31.516Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:50:34.078Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T19:50:34.082Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:20:44.677Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:20:47.508Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:20:47.518Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:21:57.792Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:22:00.524Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:22:00.530Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:42:01.428Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:42:04.706Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:42:04.712Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:43:19.784Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:43:22.554Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:43:22.556Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:44:04.359Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:44:06.950Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:44:06.958Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:44:27.368Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:44:29.967Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:44:29.971Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:46:38.247Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:46:41.193Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:46:41.197Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:49:20.913Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:49:23.730Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:49:23.738Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:49:51.002Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:49:53.564Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:49:53.566Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:49:55.731Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:49:58.335Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:49:58.341Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:50:04.869Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:50:07.460Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:50:07.466Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:53:02.910Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:53:05.662Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-08T20:53:05.669Z'
+}
