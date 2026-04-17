@@ -31,9 +31,69 @@ class GeneralService {
   async getDashboardStats(userId) {
     const projects = await projectService.getProjects(userId, {});
     const unreadMessages = await messagesService.getUnreadConversation(userId);
+    const outgoingProjectCount = projects.filter(
+      (project) => project.incoming == false,
+    ).length;
+    const outgoingProjectMoney = projects
+      .filter((project) => project.incoming == false)
+      .reduce((acc, project) => acc + project.finalPrice, 0);
+    const incomingProjectMoney = projects
+      .filter((project) => project.incoming == true)
+      .reduce((acc, project) => acc + project.finalPrice, 0);
+    const now = new Date();
+
+    const last6Months = Array.from({ length: 6 }, (_, i) => {
+      const date = new Date();
+      date.setMonth(now.getMonth() - i);
+      return {
+        year: date.getFullYear(),
+        month: date.getMonth(),
+        total: 0,
+      };
+    }).reverse();
+
+    projects.forEach((project) => {
+      if (project.incoming == false) return;
+
+      const projectDate = new Date(project.createdAt);
+      const year = projectDate.getFullYear();
+      const month = projectDate.getMonth();
+
+      const target = last6Months.find(
+        (m) => m.year === year && m.month === month,
+      );
+
+      if (target) {
+        target.total += project.finalPrice || 0;
+      }
+    });
+
+    const formattedProjects = projects
+      .map((project) => {
+        const date = project.snoozedEndDate || project.endDate;
+
+        if (!date) return null;
+
+        const d = new Date(date);
+
+        return {
+          year: d.getFullYear(),
+          month: d.getMonth() + 1,
+          day: d.getDate(),
+          projectName: project.name,
+        };
+      })
+      .filter(Boolean);
+
+    const result = last6Months.map((m) => m.total);
     return {
-      projects: projects.length,
-      unreadMessages: unreadMessages.length,
+      projects: projects,
+      unreadMessages: unreadMessages,
+      outgoingProjectCount: outgoingProjectCount,
+      outgoingProjectMoney: outgoingProjectMoney,
+      calendarProjects: formattedProjects,
+      incomingProjectMoney: incomingProjectMoney,
+      incomingProjectMoneyLast6Months: result,
     };
   }
 

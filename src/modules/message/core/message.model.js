@@ -3,14 +3,14 @@ const mongoose = require("mongoose");
 const messageSchema = new mongoose.Schema(
   {
     senderId: {
-      type: String, // Changed to String to match User model
+      type: mongoose.Schema.Types.ObjectId, // Changed to String to match User model
       required: true,
-      index: true,
+      ref: "Company",
     },
     receiverId: {
-      type: String, // Changed to String to match User model
+      type: mongoose.Schema.Types.ObjectId, // Changed to String to match User model
       required: true,
-      index: true,
+      ref: "Company",
     },
     message: {
       type: String,

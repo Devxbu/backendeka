@@ -16,6 +16,7 @@ class ProjectDTO {
       finalPrice: project.finalPrice,
       approvedDate: project.approvedDate,
       snoozedEndDate: project.snoozedEndDate,
+      incoming: project.incoming,
       userId: {
         _id: project.userId._id,
         name: project.userId.name,

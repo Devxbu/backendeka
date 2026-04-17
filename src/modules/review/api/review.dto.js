@@ -3,6 +3,8 @@ class ReviewDTO {
     if (!review) return null;
     return {
       id: review._id || review.id,
+      reviewAverage: review.reviewAverage,
+      reviewCount: review.reviewCount,
       userId: {
         _id: review.userId._id,
         name: review.userId.name,

@@ -6,7 +6,7 @@ const messageDTO = require("./message.dto");
 module.exports.getConversations = asyncHandler(async (req, res) => {
   const userId = req.user.userId;
   const conversations = await MessageService.getConversations(userId);
-  res.status(200).json(messageDTO.toList(conversations));
+  res.status(200).json(messageDTO.toMessageList(conversations));
 });
 
 // Get conversation between two users
@@ -16,7 +16,10 @@ module.exports.getConversation = asyncHandler(async (req, res) => {
     userId,
     req.params.id,
   );
-  res.status(200).json(messageDTO.toResponse(conversation));
+  res.status(200).json({
+    messages: messageDTO.toList(conversation.conversation),
+    pfp: conversation.pfp,
+  });
 });
 
 // Send message

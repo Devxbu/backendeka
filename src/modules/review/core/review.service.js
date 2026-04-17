@@ -36,6 +36,7 @@ class ReviewService {
       { reviewedUserId, isVisible: true },
       options,
     );
+
     return Promise.all(
       reviews.map((review) =>
         this._mapReviewProfileImages({
