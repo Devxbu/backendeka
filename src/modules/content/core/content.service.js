@@ -3,6 +3,7 @@ const fileService = require("../../../shared/core/file.service");
 const ApiError = require("../../../shared/errors/apiError");
 const cacheService = require("../../../shared/utils/cache.service");
 const companyService = require("../../company/core/company.service");
+const notificationService = require("../../notification/core/notification.service");
 
 class ContentService {
   constructor(repository) {
@@ -139,10 +140,14 @@ class ContentService {
     return content;
   }
 
-  async deleteContent(id) {
+  async deleteContent(id, userId) {
     const existingContent = await this.repository.findById(id);
     if (!existingContent) {
       throw new ApiError(404, "Content not found");
+    }
+
+    if (existingContent.companyId._id.toString() !== userId.toString()) {
+      throw new ApiError(403, "Unauthorized");
     }
 
     const content = await this.repository.delete(id);
@@ -162,6 +167,15 @@ class ContentService {
       throw new ApiError(404, "Content not found");
     }
     await cacheService.del(`${this.CACHE_KEYS.CONTENT_PREFIX}${id}`);
+    if (!isLiked) {
+      await notificationService.createNotification({
+        userId: content.companyId,
+        type: "content",
+        name: "Content Liked",
+        description: `Your content liked by a company`,
+        link: `/content/${content._id}`,
+      });
+    }
     return isLiked ? "Unliked" : "Liked";
   }
 
@@ -172,15 +186,52 @@ class ContentService {
       throw new ApiError(404, "Content not found");
     }
     await cacheService.del(`${this.CACHE_KEYS.CONTENT_PREFIX}${id}`);
+    if (!isSaved) {
+      await notificationService.createNotification({
+        userId: content.companyId,
+        type: "content",
+        name: "Content Saved",
+        description: `Your content saved by a company`,
+        link: `/content/${content._id}`,
+      });
+    }
     return isSaved ? "Unsaved" : "Saved";
   }
 
-  async getFeed(options) {
-    const feed = await this.repository.find({ showFeed: true }, options);
+  async getFeed(options, userId, title, category, content_category) {
+    const query = { showFeed: true };
+    if (title) {
+      query.title = { $regex: title, $options: "i" };
+    }
+
+    if (content_category) {
+      query.type = content_category;
+    }
+    let feed = await this.repository.findFeed(query, options);
+    if (category) {
+      feed = feed.filter((item) => {
+        return item.companyId.areas.some((area) => area.category === category);
+      });
+    }
     const feedWithUrls = await this._mapContentsListImageRefs(feed);
     const feedWithProfileUrls =
       await this._mapContentsListProfileImageRefs(feedWithUrls);
-    return feedWithProfileUrls;
+    const isMineContent = feedWithProfileUrls.map((content) => {
+      content.isMine = content.companyId._id.toString() === userId.toString();
+      return content;
+    });
+    const likesSavedStatus = await Promise.all(
+      isMineContent.map(async (content) => {
+        const isLiked = await companyService.isLiked(userId, content._id);
+        const isSaved = await companyService.isSaved(userId, content._id);
+        return {
+          ...content,
+          isLiked,
+          isSaved,
+        };
+      }),
+    );
+    return likesSavedStatus;
   }
 
   async _invalidateCache(id = null) {

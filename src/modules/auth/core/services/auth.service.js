@@ -135,14 +135,14 @@ class AuthService {
     // 1. Rate Limiting
     const ipLimit = await rateLimiter.checkSlidingWindow(
       `ratelimit:login:ip:${ipAddress}`,
-      10,
+      30,
       900,
     );
 
     const emailLower = email.toLowerCase();
     const emailLimit = await rateLimiter.checkTokenBucket(
       `ratelimit:login:email:${emailLower}`,
-      5,
+      15,
       0.0055,
       900,
     );

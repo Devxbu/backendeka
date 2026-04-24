@@ -45,15 +45,21 @@ module.exports.saveContent = catchAsync(async (req, res) => {
 
 module.exports.deleteContent = catchAsync(async (req, res) => {
   const { id } = req.params;
-  await ContentService.deleteContent(id);
+  await ContentService.deleteContent(id, req.user.userId);
   res.status(200).json({ message: "Content deleted successfully" });
 });
 
 module.exports.getFeed = catchAsync(async (req, res) => {
-  const { limit, page } = req.query;
-  const feed = await ContentService.getFeed({
-    limit: parseInt(limit) || 10,
-    page: parseInt(page) || 1,
-  });
+  const { limit, page, search, category, content_category } = req.query;
+  const feed = await ContentService.getFeed(
+    {
+      limit: parseInt(limit) || 10,
+      page: parseInt(page) || 1,
+    },
+    req.user.userId,
+    search,
+    category,
+    content_category,
+  );
   res.status(200).json(ContentDTO.toFeed(feed));
 });

@@ -1,0 +1,2055 @@
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T11:50:39.603Z'
+}
+{
+  message: "Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/",
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-b3j3m2d-shard-00-00.rr1ngbb.mongodb.net:27017' => ServerDescription {
+        address: 'ac-b3j3m2d-shard-00-00.rr1ngbb.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 32847,
+        lastWriteDate: 0,
+        error: MongoNetworkError: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+        
+            at TLSSocket.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connect.js:313:44)
+            at Object.onceWrapper (node:events:623:26)
+            at TLSSocket.emit (node:events:508:28)
+            at emitErrorNT (node:internal/streams/destroy:170:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+          errorLabelSet: Set(3) {
+            'SystemOverloadedError',
+            'RetryableError',
+            'ResetPool'
+          },
+          beforeHandshake: false,
+          [cause]: [Error: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+          ] {
+            library: 'SSL routines',
+            reason: 'tlsv1 alert internal error',
+            code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        maxMessageSizeBytes: null,
+        maxWriteBatchSize: null,
+        maxBsonObjectSize: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null,
+        iscryptd: false
+      },
+      'ac-b3j3m2d-shard-00-02.rr1ngbb.mongodb.net:27017' => ServerDescription {
+        address: 'ac-b3j3m2d-shard-00-02.rr1ngbb.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 32847,
+        lastWriteDate: 0,
+        error: MongoNetworkError: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+        
+            at TLSSocket.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connect.js:313:44)
+            at Object.onceWrapper (node:events:623:26)
+            at TLSSocket.emit (node:events:508:28)
+            at emitErrorNT (node:internal/streams/destroy:170:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+          errorLabelSet: Set(3) {
+            'SystemOverloadedError',
+            'RetryableError',
+            'ResetPool'
+          },
+          beforeHandshake: false,
+          [cause]: [Error: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+          ] {
+            library: 'SSL routines',
+            reason: 'tlsv1 alert internal error',
+            code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        maxMessageSizeBytes: null,
+        maxWriteBatchSize: null,
+        maxBsonObjectSize: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null,
+        iscryptd: false
+      },
+      'ac-b3j3m2d-shard-00-01.rr1ngbb.mongodb.net:27017' => ServerDescription {
+        address: 'ac-b3j3m2d-shard-00-01.rr1ngbb.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 32769,
+        lastWriteDate: 0,
+        error: MongoNetworkError: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+        
+            at TLSSocket.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connect.js:313:44)
+            at Object.onceWrapper (node:events:623:26)
+            at TLSSocket.emit (node:events:508:28)
+            at emitErrorNT (node:internal/streams/destroy:170:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+          errorLabelSet: Set(3) {
+            'SystemOverloadedError',
+            'RetryableError',
+            'ResetPool'
+          },
+          beforeHandshake: false,
+          [cause]: [Error: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+          ] {
+            library: 'SSL routines',
+            reason: 'tlsv1 alert internal error',
+            code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        maxMessageSizeBytes: null,
+        maxWriteBatchSize: null,
+        maxBsonObjectSize: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null,
+        iscryptd: false
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-7k7wwh-shard-0',
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  cause: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-b3j3m2d-shard-00-00.rr1ngbb.mongodb.net:27017' => ServerDescription {
+        address: 'ac-b3j3m2d-shard-00-00.rr1ngbb.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 32847,
+        lastWriteDate: 0,
+        error: MongoNetworkError: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+        
+            at TLSSocket.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connect.js:313:44)
+            at Object.onceWrapper (node:events:623:26)
+            at TLSSocket.emit (node:events:508:28)
+            at emitErrorNT (node:internal/streams/destroy:170:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+          errorLabelSet: Set(3) {
+            'SystemOverloadedError',
+            'RetryableError',
+            'ResetPool'
+          },
+          beforeHandshake: false,
+          [cause]: [Error: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+          ] {
+            library: 'SSL routines',
+            reason: 'tlsv1 alert internal error',
+            code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        maxMessageSizeBytes: null,
+        maxWriteBatchSize: null,
+        maxBsonObjectSize: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null,
+        iscryptd: false
+      },
+      'ac-b3j3m2d-shard-00-02.rr1ngbb.mongodb.net:27017' => ServerDescription {
+        address: 'ac-b3j3m2d-shard-00-02.rr1ngbb.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 32847,
+        lastWriteDate: 0,
+        error: MongoNetworkError: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+        
+            at TLSSocket.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connect.js:313:44)
+            at Object.onceWrapper (node:events:623:26)
+            at TLSSocket.emit (node:events:508:28)
+            at emitErrorNT (node:internal/streams/destroy:170:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+          errorLabelSet: Set(3) {
+            'SystemOverloadedError',
+            'RetryableError',
+            'ResetPool'
+          },
+          beforeHandshake: false,
+          [cause]: [Error: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+          ] {
+            library: 'SSL routines',
+            reason: 'tlsv1 alert internal error',
+            code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        maxMessageSizeBytes: null,
+        maxWriteBatchSize: null,
+        maxBsonObjectSize: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null,
+        iscryptd: false
+      },
+      'ac-b3j3m2d-shard-00-01.rr1ngbb.mongodb.net:27017' => ServerDescription {
+        address: 'ac-b3j3m2d-shard-00-01.rr1ngbb.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 32769,
+        lastWriteDate: 0,
+        error: MongoNetworkError: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+        
+            at TLSSocket.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connect.js:313:44)
+            at Object.onceWrapper (node:events:623:26)
+            at TLSSocket.emit (node:events:508:28)
+            at emitErrorNT (node:internal/streams/destroy:170:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+          errorLabelSet: Set(3) {
+            'SystemOverloadedError',
+            'RetryableError',
+            'ResetPool'
+          },
+          beforeHandshake: false,
+          [cause]: [Error: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+          ] {
+            library: 'SSL routines',
+            reason: 'tlsv1 alert internal error',
+            code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        maxMessageSizeBytes: null,
+        maxWriteBatchSize: null,
+        maxBsonObjectSize: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null,
+        iscryptd: false
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-7k7wwh-shard-0',
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  level: 'error',
+  service: 'general-service',
+  stack: "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\n" +
+    '    at _handleConnectionErrors (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongoose/lib/connection.js:1180:11)\n' +
+    '    at NativeConnection.openUri (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongoose/lib/connection.js:1111:11)\n' +
+    '    at async module.exports.connectDB (/Users/bahri/Documents/www/Projects/EKA/backend_new/src/config/db.js:7:5)\n' +
+    '    at async bootstrap (/Users/bahri/Documents/www/Projects/EKA/backend_new/src/core/server.js:14:3)',
+  timestamp: '2026-04-24T11:51:11.758Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T11:54:53.158Z'
+}
+{
+  message: "Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/",
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-b3j3m2d-shard-00-02.rr1ngbb.mongodb.net:27017' => ServerDescription {
+        address: 'ac-b3j3m2d-shard-00-02.rr1ngbb.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 32647,
+        lastWriteDate: 0,
+        error: MongoNetworkError: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+        
+            at TLSSocket.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connect.js:313:44)
+            at Object.onceWrapper (node:events:623:26)
+            at TLSSocket.emit (node:events:508:28)
+            at emitErrorNT (node:internal/streams/destroy:170:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+          errorLabelSet: Set(3) {
+            'SystemOverloadedError',
+            'RetryableError',
+            'ResetPool'
+          },
+          beforeHandshake: false,
+          [cause]: [Error: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+          ] {
+            library: 'SSL routines',
+            reason: 'tlsv1 alert internal error',
+            code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        maxMessageSizeBytes: null,
+        maxWriteBatchSize: null,
+        maxBsonObjectSize: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null,
+        iscryptd: false
+      },
+      'ac-b3j3m2d-shard-00-00.rr1ngbb.mongodb.net:27017' => ServerDescription {
+        address: 'ac-b3j3m2d-shard-00-00.rr1ngbb.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 32751,
+        lastWriteDate: 0,
+        error: MongoNetworkError: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+        
+            at TLSSocket.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connect.js:313:44)
+            at Object.onceWrapper (node:events:623:26)
+            at TLSSocket.emit (node:events:508:28)
+            at emitErrorNT (node:internal/streams/destroy:170:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+          errorLabelSet: Set(3) {
+            'SystemOverloadedError',
+            'RetryableError',
+            'ResetPool'
+          },
+          beforeHandshake: false,
+          [cause]: [Error: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+          ] {
+            library: 'SSL routines',
+            reason: 'tlsv1 alert internal error',
+            code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        maxMessageSizeBytes: null,
+        maxWriteBatchSize: null,
+        maxBsonObjectSize: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null,
+        iscryptd: false
+      },
+      'ac-b3j3m2d-shard-00-01.rr1ngbb.mongodb.net:27017' => ServerDescription {
+        address: 'ac-b3j3m2d-shard-00-01.rr1ngbb.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 32543,
+        lastWriteDate: 0,
+        error: MongoNetworkError: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+        
+            at TLSSocket.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connect.js:313:44)
+            at Object.onceWrapper (node:events:623:26)
+            at TLSSocket.emit (node:events:508:28)
+            at emitErrorNT (node:internal/streams/destroy:170:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+          errorLabelSet: Set(3) {
+            'SystemOverloadedError',
+            'RetryableError',
+            'ResetPool'
+          },
+          beforeHandshake: false,
+          [cause]: [Error: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+          ] {
+            library: 'SSL routines',
+            reason: 'tlsv1 alert internal error',
+            code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        maxMessageSizeBytes: null,
+        maxWriteBatchSize: null,
+        maxBsonObjectSize: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null,
+        iscryptd: false
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-7k7wwh-shard-0',
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  cause: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-b3j3m2d-shard-00-02.rr1ngbb.mongodb.net:27017' => ServerDescription {
+        address: 'ac-b3j3m2d-shard-00-02.rr1ngbb.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 32647,
+        lastWriteDate: 0,
+        error: MongoNetworkError: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+        
+            at TLSSocket.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connect.js:313:44)
+            at Object.onceWrapper (node:events:623:26)
+            at TLSSocket.emit (node:events:508:28)
+            at emitErrorNT (node:internal/streams/destroy:170:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+          errorLabelSet: Set(3) {
+            'SystemOverloadedError',
+            'RetryableError',
+            'ResetPool'
+          },
+          beforeHandshake: false,
+          [cause]: [Error: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+          ] {
+            library: 'SSL routines',
+            reason: 'tlsv1 alert internal error',
+            code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        maxMessageSizeBytes: null,
+        maxWriteBatchSize: null,
+        maxBsonObjectSize: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null,
+        iscryptd: false
+      },
+      'ac-b3j3m2d-shard-00-00.rr1ngbb.mongodb.net:27017' => ServerDescription {
+        address: 'ac-b3j3m2d-shard-00-00.rr1ngbb.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 32751,
+        lastWriteDate: 0,
+        error: MongoNetworkError: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+        
+            at TLSSocket.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connect.js:313:44)
+            at Object.onceWrapper (node:events:623:26)
+            at TLSSocket.emit (node:events:508:28)
+            at emitErrorNT (node:internal/streams/destroy:170:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+          errorLabelSet: Set(3) {
+            'SystemOverloadedError',
+            'RetryableError',
+            'ResetPool'
+          },
+          beforeHandshake: false,
+          [cause]: [Error: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+          ] {
+            library: 'SSL routines',
+            reason: 'tlsv1 alert internal error',
+            code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        maxMessageSizeBytes: null,
+        maxWriteBatchSize: null,
+        maxBsonObjectSize: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null,
+        iscryptd: false
+      },
+      'ac-b3j3m2d-shard-00-01.rr1ngbb.mongodb.net:27017' => ServerDescription {
+        address: 'ac-b3j3m2d-shard-00-01.rr1ngbb.mongodb.net:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        minRoundTripTime: 0,
+        lastUpdateTime: 32543,
+        lastWriteDate: 0,
+        error: MongoNetworkError: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+        
+            at TLSSocket.<anonymous> (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connect.js:313:44)
+            at Object.onceWrapper (node:events:623:26)
+            at TLSSocket.emit (node:events:508:28)
+            at emitErrorNT (node:internal/streams/destroy:170:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+          errorLabelSet: Set(3) {
+            'SystemOverloadedError',
+            'RetryableError',
+            'ResetPool'
+          },
+          beforeHandshake: false,
+          [cause]: [Error: 40EC960B02000000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:ssl/record/rec_layer_s3.c:916:SSL alert number 80
+          ] {
+            library: 'SSL routines',
+            reason: 'tlsv1 alert internal error',
+            code: 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR'
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        maxMessageSizeBytes: null,
+        maxWriteBatchSize: null,
+        maxBsonObjectSize: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null,
+        iscryptd: false
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-7k7wwh-shard-0',
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  level: 'error',
+  service: 'general-service',
+  stack: "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\n" +
+    '    at _handleConnectionErrors (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongoose/lib/connection.js:1180:11)\n' +
+    '    at NativeConnection.openUri (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongoose/lib/connection.js:1111:11)\n' +
+    '    at async module.exports.connectDB (/Users/bahri/Documents/www/Projects/EKA/backend_new/src/config/db.js:7:5)\n' +
+    '    at async bootstrap (/Users/bahri/Documents/www/Projects/EKA/backend_new/src/core/server.js:14:3)',
+  timestamp: '2026-04-24T11:55:25.339Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T11:59:52.122Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T11:59:55.342Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T11:59:55.357Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:04:38.158Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:04:41.409Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:04:41.417Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:04:57 +0000] "POST /api/auth/login HTTP/1.1" 200 788 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:04:57.483Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:05:21 +0000] "DELETE /api/content/delete-content/69d5a7b7f1e5ce67ae027d0d HTTP/1.1" 403 53 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:05:21.677Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:05:50.349Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:05:53.329Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:05:53.339Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:05:57.374Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:06:00.426Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:06:00.433Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:06:02 +0000] "DELETE /api/content/delete-content/69d5a7b7f1e5ce67ae027d0d HTTP/1.1" 403 53 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:06:02.388Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:06:34.031Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:06:34.923Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:06:34.927Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:06:36 +0000] "DELETE /api/content/delete-content/69d5a7b7f1e5ce67ae027d0d HTTP/1.1" 403 53 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:06:36.526Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:06:48.926Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:06:49.995Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:06:52.978Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:06:52.985Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:06:54 +0000] "DELETE /api/content/delete-content/69d5a7b7f1e5ce67ae027d0d HTTP/1.1" 200 42 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:06:54.385Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:07:00.858Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:07:01.772Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:07:01.779Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:29:34.412Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:29:37.506Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:29:37.511Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:29:54.782Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:29:55.678Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:29:55.682Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:30:19.580Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:30:20.410Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:30:20.415Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:30:25.816Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:30:26.579Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:30:26.583Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:31:22.229Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:31:25.282Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:31:25.288Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:31:40.546Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:31:43.460Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:31:43.468Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:32:19.308Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:32:22.260Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:32:22.269Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:32:37 +0000] "PATCH /api/content/like-content/69d5a7b7f1e5ce67ae027d0d HTTP/1.1" 401 65 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:32:37.078Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:32:40 +0000] "POST /api/auth/login HTTP/1.1" 200 788 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:32:40.619Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:32:52 +0000] "PATCH /api/content/like-content/69d5a7b7f1e5ce67ae027d0d HTTP/1.1" 404 58 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:32:52.588Z'
+}
+{
+  level: 'error',
+  service: 'general-service',
+  message: "Cannot read properties of undefined (reading '_id')",
+  stack: "TypeError: Cannot read properties of undefined (reading '_id')\n" +
+    '    at ContentDTO.toResponse (/Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/api/content.dto.js:7:32)\n' +
+    '    at /Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/api/content.controller.js:37:35\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2026-04-24T12:33:02.616Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:33:02 +0000] "PATCH /api/content/like-content/69d681b8c6224270102c5eca HTTP/1.1" 500 62 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:33:02.618Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:33:36.804Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:33:39.888Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:33:39.894Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:33:45 +0000] "PATCH /api/content/like-content/69d681b8c6224270102c5eca HTTP/1.1" 200 16 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:33:45.383Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:34:33 +0000] "PATCH /api/content/like-content/69d681b8c6224270102c5eca HTTP/1.1" 200 16 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:34:33.127Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:34:48 +0000] "PATCH /api/content/save-content/69d681b8c6224270102c5eca HTTP/1.1" 200 16 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:34:48.197Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:34:49 +0000] "PATCH /api/content/save-content/69d681b8c6224270102c5eca HTTP/1.1" 200 16 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:34:49.834Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:35:47.587Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:35:50.757Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:35:50.763Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:37:16.564Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:37:19.626Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:37:19.628Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:39:22.468Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:39:26.049Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:39:26.056Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:40:09.481Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:40:10.299Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:40:10.304Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:40:27.564Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:40:30.516Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:40:30.519Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:41:33.709Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:41:37.063Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:41:37.072Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:41:43 +0000] "POST /api/auth/login HTTP/1.1" 200 788 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:41:43.311Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:41:53 +0000] "GET /api/content/feed HTTP/1.1" 200 3675 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:41:53.657Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:42:18 +0000] "GET /api/content/feed HTTP/1.1" 200 3675 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:42:18.229Z'
+}
+{
+  level: 'error',
+  service: 'general-service',
+  message: "Cannot read properties of null (reading '_id')",
+  stack: "TypeError: Cannot read properties of null (reading '_id')\n" +
+    '    at /Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/core/content.service.js:228:42\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at ContentService.getFeed (/Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/core/content.service.js:227:47)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/api/content.controller.js:54:16',
+  timestamp: '2026-04-24T12:43:10.184Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:43:10 +0000] "GET /api/content/feed HTTP/1.1" 500 62 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:43:10.186Z'
+}
+{
+  level: 'error',
+  service: 'general-service',
+  message: "Cannot read properties of null (reading '_id')",
+  stack: "TypeError: Cannot read properties of null (reading '_id')\n" +
+    '    at /Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/core/content.service.js:228:42\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at ContentService.getFeed (/Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/core/content.service.js:227:47)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/api/content.controller.js:54:16',
+  timestamp: '2026-04-24T12:43:15.394Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:43:15 +0000] "GET /api/content/feed HTTP/1.1" 500 62 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:43:15.396Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:44:07 +0000] "GET /api/content/feed HTTP/1.1" 200 3672 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:44:07.633Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:46:02.767Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:46:06.020Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:46:06.031Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:46:09.201Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:46:12.110Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:46:12.113Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:46:49.696Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:46:52.526Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:46:52.528Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:47:04.135Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:47:07.050Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:47:07.055Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:47:17 +0000] "GET /api/content/feed?search=test HTTP/1.1" 200 3672 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:47:17.915Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:47:22 +0000] "GET /api/content/feed?search= HTTP/1.1" 200 3672 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:47:22.374Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:47:25 +0000] "GET /api/content/feed?search=t HTTP/1.1" 200 3672 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:47:25.703Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:12:47:28 +0000] "GET /api/content/feed?search=tss HTTP/1.1" 200 2 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T12:47:28.272Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:04:51.807Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:04:54.986Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:04:54.993Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:05:21.388Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:05:24.553Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:05:24.560Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:05:26.624Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:05:27.447Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:05:27.455Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:05:30.008Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:05:32.990Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:05:32.997Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:05:35 +0000] "POST /api/auth/login HTTP/1.1" 200 788 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:05:35.429Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:05:49 +0000] "GET /api/content/feed?search= HTTP/1.1" 200 3765 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:05:49.174Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:06:26 +0000] "PATCH /api/content/like-content/69d680dc5a0ff1bd467af0a3 HTTP/1.1" 200 16 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:06:26.307Z'
+}
+{
+  errorLabelSet: Set(0) {},
+  errorResponse: {
+    ok: 0,
+    errmsg: '$regex has to be a string',
+    code: 2,
+    codeName: 'BadValue',
+    '$clusterTime': {
+      clusterTime: new Timestamp({ t: 1777035993, i: 11 }),
+      signature: {
+        hash: Binary.createFromBase64('xrl9D9T2KB5mWURHI72aU51rTCs=', 0),
+        keyId: new Long('7568892708211654697')
+      }
+    },
+    operationTime: new Timestamp({ t: 1777035993, i: 11 })
+  },
+  ok: 0,
+  code: 2,
+  codeName: 'BadValue',
+  '$clusterTime': {
+    clusterTime: new Timestamp({ t: 1777035993, i: 11 }),
+    signature: {
+      hash: Binary.createFromBase64('xrl9D9T2KB5mWURHI72aU51rTCs=', 0),
+      keyId: new Long('7568892708211654697')
+    }
+  },
+  operationTime: new Timestamp({ t: 1777035993, i: 11 }),
+  level: 'error',
+  service: 'general-service',
+  message: '$regex has to be a string',
+  stack: 'MongoServerError: $regex has to be a string\n' +
+    '    at Connection.sendCommand (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connection.js:320:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async Connection.command (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cmap/connection.js:344:26)\n' +
+    '    at async Server.command (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/sdam/server.js:208:29)\n' +
+    '    at async tryOperation (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/operations/execute_operation.js:216:32)\n' +
+    '    at async executeOperation (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/operations/execute_operation.js:80:16)\n' +
+    '    at async FindCursor._initialize (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cursor/find_cursor.js:62:26)\n' +
+    '    at async FindCursor.cursorInit (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cursor/abstract_cursor.js:620:27)\n' +
+    '    at async FindCursor.fetchBatch (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cursor/abstract_cursor.js:654:13)\n' +
+    '    at async FindCursor.next (/Users/bahri/Documents/www/Projects/EKA/backend_new/node_modules/mongodb/lib/cursor/abstract_cursor.js:326:17)',
+  timestamp: '2026-04-24T13:06:33.142Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:06:33 +0000] "GET /api/content/feed HTTP/1.1" 500 62 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:06:33.148Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:07:00.265Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:07:03.576Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:07:03.584Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:07:05 +0000] "GET /api/content/feed HTTP/1.1" 200 3761 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:07:05.877Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:08:13.591Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:08:16.508Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:08:16.514Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:08:22.695Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:08:23.751Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:08:23.754Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:12:00.331Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:12:03.570Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:12:03.575Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:12:19.647Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:12:22.617Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:12:22.625Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:12:40 +0000] "GET /api/content/feed?content_category=case_study HTTP/1.1" 200 3761 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:12:40.962Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:12:51 +0000] "GET /api/content/feed?content_category=case_studyd HTTP/1.1" 200 2 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:12:51.506Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:14:14.979Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:14:17.956Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:14:17.972Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:15:08.778Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:15:09.566Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:15:09.568Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:15:52.515Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:15:55.833Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:15:55.840Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:15:58 +0000] "GET /api/content/feed?content_category=case_study HTTP/1.1" 200 3761 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:15:58.356Z'
+}
+{
+  level: 'error',
+  service: 'general-service',
+  message: "Cannot read properties of undefined (reading 'category')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'category')\n" +
+    '    at /Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/core/content.service.js:213:33\n' +
+    '    at Array.filter (<anonymous>)\n' +
+    '    at ContentService.getFeed (/Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/core/content.service.js:212:19)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/api/content.controller.js:54:16',
+  timestamp: '2026-04-24T13:16:33.536Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:16:33 +0000] "GET /api/content/feed?content_category=case_study&category=test HTTP/1.1" 500 62 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:16:33.539Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:16:44.026Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:16:46.953Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:16:46.956Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:16:58.861Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:17:01.830Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:17:01.834Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:18:38.875Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:18:42.027Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:18:42.034Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:18:53.659Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:18:54.487Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:18:54.491Z'
+}
+{
+  level: 'error',
+  service: 'general-service',
+  message: 'this.hasCategory is not a function',
+  stack: 'TypeError: this.hasCategory is not a function\n' +
+    '    at /Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/core/content.service.js:214:34\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at ContentService.getFeed (/Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/core/content.service.js:213:14)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /Users/bahri/Documents/www/Projects/EKA/backend_new/src/modules/content/api/content.controller.js:54:16',
+  timestamp: '2026-04-24T13:19:00.672Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:19:00 +0000] "GET /api/content/feed?content_category=case_study&category=test HTTP/1.1" 500 62 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:19:00.678Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:19:18.850Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:19:21.772Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:19:21.780Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:19:23 +0000] "GET /api/content/feed?content_category=case_study&category=test HTTP/1.1" 200 2 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:19:23.770Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:21:21.324Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:21:24.382Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:21:24.385Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:22:16.260Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:22:17.062Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:22:17.070Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:22:23.695Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:22:26.602Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:22:26.607Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:22:30 +0000] "GET /api/content/feed?content_category=case_study&category=test HTTP/1.1" 401 65 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:22:30.538Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:22:35 +0000] "POST /api/auth/login HTTP/1.1" 200 788 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:22:35.764Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:22:44 +0000] "GET /api/content/feed?content_category=case_study&category=test HTTP/1.1" 200 3761 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:22:44.205Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:22:50 +0000] "GET /api/content/feed?content_category=case_study&category=tests HTTP/1.1" 200 3761 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:22:50.931Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:23:53.653Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:23:56.913Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:23:56.920Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:06.550Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:07.359Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:07.365Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:14.633Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:15.465Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:15.472Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:24:17 +0000] "GET /api/content/feed?content_category=case_study&category=tests HTTP/1.1" 200 2 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:17.314Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:24:21 +0000] "GET /api/content/feed?content_category=case_study&category=test HTTP/1.1" 200 2 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:21.768Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:31.746Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:34.744Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:34.750Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:24:36 +0000] "GET /api/content/feed?content_category=case_study&category=test HTTP/1.1" 200 2 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:36.851Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:47.532Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:51.738Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:51.742Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:24:53 +0000] "GET /api/content/feed?content_category=case_study&category=test HTTP/1.1" 200 2 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:24:53.894Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:25:13.873Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:25:17.239Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:25:17.247Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:25:18 +0000] "GET /api/content/feed?content_category=case_study&category=test HTTP/1.1" 200 2 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:25:18.554Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:28:49.056Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:28:52.168Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:28:53.145Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:28:53.153Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:29:22.129Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:29:25.332Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:29:25.338Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:30:26.448Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:30:30.252Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:30:30.255Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:31:10.937Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:31:14.223Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:31:14.239Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:31:17 +0000] "GET /api/content/feed?content_category=case_study&category=test HTTP/1.1" 200 3761 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:31:17.991Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:31:23 +0000] "GET /api/content/feed?content_category=case_study&category=tests HTTP/1.1" 200 2 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:31:23.303Z'
+}
+{
+  message: '::1 - - [24/Apr/2026:13:31:28 +0000] "GET /api/content/feed?content_category=case_study&category=test HTTP/1.1" 200 3761 "-" "PostmanRuntime/7.51.1"',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:31:28.142Z'
+}
+{
+  message: 'Redis Client Connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:35:22.127Z'
+}
+{
+  message: 'MongoDB connected',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:35:25.465Z'
+}
+{
+  message: 'Server running on port 8000',
+  level: 'info',
+  service: 'general-service',
+  timestamp: '2026-04-24T13:35:25.472Z'
+}

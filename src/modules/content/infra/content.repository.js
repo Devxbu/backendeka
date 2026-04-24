@@ -18,6 +18,17 @@ class ContentRepository {
       .populate("companyId", "name pfp")
       .lean();
   }
+  async findFeed(query = {}, options = {}) {
+    const { limit = 10, page = 1, sort = { createdAt: -1 } } = options;
+    const skip = (page - 1) * limit;
+
+    return Content.find({ ...query })
+      .sort(sort)
+      .limit(limit)
+      .skip(skip)
+      .populate("companyId", "name pfp areas")
+      .lean();
+  }
 
   async findById(id) {
     return Content.findOne({ _id: id })

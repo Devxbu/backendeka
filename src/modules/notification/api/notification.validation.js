@@ -4,7 +4,7 @@ const createNotification = {
   body: Joi.object().keys({
     userId: Joi.string().required(),
     type: Joi.string()
-      .valid("project", "message", "mention", "settings")
+      .valid("project", "message", "mention", "settings", "content")
       .required(),
     name: Joi.string().trim(),
     message: Joi.string().trim(),
@@ -19,7 +19,7 @@ const updateNotification = {
   }),
   body: Joi.object().keys({
     type: Joi.string()
-      .valid("project", "message", "mention", "settings")
+      .valid("project", "message", "mention", "settings", "content")
       .required(),
     name: Joi.string().trim(),
     message: Joi.string().trim(),

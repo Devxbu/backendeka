@@ -19,6 +19,40 @@ class CompanyService {
     return profile;
   }
 
+  async isLiked(userId, contentId) {
+    const profile = await this.repository.findById(userId);
+    if (!profile) {
+      throw new ApiError(404, "Company profile not found");
+    }
+    profile.likedContents = profile.likedContents || [];
+    return profile.likedContents.some(
+      (contentId) => contentId.toString() === contentId.toString(),
+    );
+  }
+
+  async hasCategory(id, category) {
+    const profile = await this.repository.findById(id);
+
+    if (!profile) {
+      throw new ApiError(404, "Company profile not found");
+    }
+
+    const categories = profile?.areas?.category || [];
+
+    return categories.some((c) => c === category);
+  }
+
+  async isSaved(id, contentId) {
+    const profile = await this.repository.findById(id);
+    if (!profile) {
+      throw new ApiError(404, "Company profile not found");
+    }
+    profile.savedContents = profile.savedContents || [];
+    return profile.savedContents.some(
+      (contentId) => contentId.toString() === contentId.toString(),
+    );
+  }
+
   async getProfileById(id) {
     const cacheKey = `${this.CACHE_PREFIX}${id}`;
     const cached = await cacheService.get(cacheKey);
