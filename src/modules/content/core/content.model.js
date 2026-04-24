@@ -75,8 +75,7 @@ const contentSchema = new mongoose.Schema(
         max: { type: Number },
       },
       tools: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: "Tool",
+        type: [String],
         default: [],
       },
       language: {

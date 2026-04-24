@@ -10,45 +10,45 @@ const companySchema = new mongoose.Schema(
     },
     name: {
       type: String,
-      required: true,
+//      required: true,
       trim: true,
       index: true,
     },
     slug: {
       type: String,
       unique: true,
-      required: true,
+  //    required: true,
       lowercase: true,
       trim: true,
       index: true,
     },
     country: {
       type: String,
-      required: true,
+    //  required: true,
     },
     city: {
       type: String,
-      required: true,
+      //required: true,
     },
     employees: {
       type: String,
-      required: true,
+     // required: true,
     },
     foundingYear: {
       type: Number,
-      required: true,
+     // required: true,
     },
     languages: {
       type: Array,
-      required: true,
+     // required: true,
     },
     tools: {
       type: Array,
-      required: true,
+      //required: true,
     },
     industry: {
       type: Array,
-      required: true,
+     // required: true,
     },
     workingPreference: {
       type: [String],
@@ -57,15 +57,15 @@ const companySchema = new mongoose.Schema(
     },
     bio: {
       type: String,
-      required: true,
+     // required: true,
     },
     pfp: {
       type: String,
-      required: true,
+     // required: true,
     },
     banner: {
       type: String,
-      required: true,
+     // required: true,
     },
     isVerified: {
       type: Boolean,
@@ -75,11 +75,11 @@ const companySchema = new mongoose.Schema(
       {
         category: {
           type: String,
-          required: true,
+       //   required: true,
         },
         subCategory: {
           type: String,
-          required: true,
+         // required: true,
         },
       },
     ],
@@ -100,7 +100,7 @@ const companySchema = new mongoose.Schema(
     },
     address: {
       type: String,
-      required: true,
+     // required: true,
     },
     isTaxVerified: {
       type: Boolean,

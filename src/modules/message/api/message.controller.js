@@ -27,7 +27,7 @@ module.exports.sendMessage = asyncHandler(async (req, res) => {
   const userId = req.user.userId;
   const { receiverId, message } = req.body;
   const result = await MessageService.sendMessage(userId, receiverId, message);
-  res.status(201).json(messageDTO.toResponse(result));
+  res.status(201).json(messageDTO.toItem(result));
 });
 
 // Set messages as deleted
