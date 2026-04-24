@@ -15,7 +15,7 @@ class EmailService {
 
   async sendVerificationEmail(to, token) {
     const subject = "Verify your email address";
-    const verifyUrl = `${env.FRONTEND_VERIFY_EMAIL_URL}?token=${token}`;
+    const verifyUrl = `${env.FRONTEND_EMAIL_VERIFICATION_URL}?token=${token}`;
 
     const text = `Welcome! Please verify your email by clicking the following link: ${verifyUrl}`;
 
@@ -71,7 +71,7 @@ class EmailService {
   }
   async sendForgotPasswordEmail(to, token) {
     const subject = "Change your password";
-    const verifyUrl = `${env.FRONTEND_FORGOT_PASS_URL}?token=${token}`;
+    const verifyUrl = `${env.FRONTEND_PASSWORD_RESET_URL}?token=${token}`;
 
     const text = `Welcome! Please change your password by clicking the following link: ${verifyUrl}`;
 
