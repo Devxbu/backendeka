@@ -29,7 +29,7 @@ module.exports.createApp = () => {
   app.use(express.json());
   app.use(cookieParser());
 
-  // app.use(rateLimiter({ window: 60, limit: 5000 }));
+  app.use(rateLimiter({ window: 60, limit: 100 }));
   app.use("/api", router);
 
   app.use((req, res, next) => {

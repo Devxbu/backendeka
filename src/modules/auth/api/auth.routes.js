@@ -6,7 +6,7 @@ const validate = require("../../../shared/middlewares/validate.middleware");
 const authValidation = require("./auth.validation");
 const rateLimiter = require("../../../middlewares/rateLimiter");
 
-const authLimit = rateLimiter({ window: 15 * 60, limit: 5, keyPrefix: "auth" });
+// const authLimit = rateLimiter({ window: 15 * 60, limit: 5, keyPrefix: "auth" });
 
 router.post(
   "/register",
