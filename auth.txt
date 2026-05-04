@@ -1,0 +1,54 @@
+-POST - /register
+REQ_BODY: { email: string, password: string, companyName: string }
+
+RESPONSE: {success: string, message: string, code: number, data: {userId: string, email: string, emailVerificationRequired: boolean}}
+
+--------------------------------------------------------
+
+-POST - /login
+REQ_BODY: { email: string, password: string }
+
+RESPONSE: {success: string, message: string, data: {message: string, accessToken: string, tokenType: string, expiresAt: number, user: {userId: string, email: string, roles: string[], permissions: string[]}}}
+
+--------------------------------------------------------
+
+-POST - /logout
+REQ_AUTH_HEADER: Bearer <token>
+
+RESPONSE: {success: string, message: string, data: {message: string}, code: number}
+
+--------------------------------------------------------
+
+-POST - /refresh
+REQ_COOKIE: refreshToken=<token>
+
+RESPONSE: {success: string, message: string, code: number, data: {message: string, accessToken: string, tokenType: string, user: {userId: string}}}
+
+--------------------------------------------------------
+
+-POST - /logout-all
+REQ_AUTH_HEADER: Bearer <token>
+
+RESPONSE: {success: string, message: string, data: {message: string}, code: number}
+
+--------------------------------------------------------
+
+-POST - /forgot-password
+REQ_BODY: { email: string }
+
+RESPONSE: {success: string, message: string, data: {message: string}, code: number}
+
+--------------------------------------------------------
+
+-POST - /reset-password
+REQ_BODY: { token: string, password: string }
+
+RESPONSE: {success: string, message: string, data: {message: string}, code: number}
+
+--------------------------------------------------------
+
+-GET - /verify-email?token=XXX
+
+RESPONSE: {success: string, message: string, data: {message: string}, code: number}
+
+--------------------------------------------------------
