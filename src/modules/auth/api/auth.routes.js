@@ -10,22 +10,15 @@ const rateLimiter = require("../../../middlewares/rateLimiter");
 
 router.post(
   "/register",
-  authLimit,
   validate(authValidation.register),
   authController.register,
 );
-router.post(
-  "/login",
-  authLimit,
-  validate(authValidation.login),
-  authController.login,
-);
+router.post("/login", validate(authValidation.login), authController.login);
 router.post("/refresh", authController.refreshToken);
 router.post("/logout", extractToken, authController.logout);
 router.post("/logout-all", extractToken, authController.logoutAll);
 router.post(
   "/forgot-password",
-  authLimit,
   validate(authValidation.forgotPassword),
   authController.forgotPassword,
 );
