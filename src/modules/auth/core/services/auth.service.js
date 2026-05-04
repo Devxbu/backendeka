@@ -25,30 +25,30 @@ class AuthService {
 
     try {
       // 1. Rate Limiting
-      const ipLimit = await rateLimiter.checkSlidingWindow(
-        `ratelimit:register:ip:${ipAddress}`,
-        3,
-        3600, // 1 hour
-      );
-      if (!ipLimit.allowed) {
-        throw new ApiError(
-          429,
-          "Too many registration attempts from this IP. Please try again later.",
-        );
-      }
+      // const ipLimit = await rateLimiter.checkSlidingWindow(
+      //   `ratelimit:register:ip:${ipAddress}`,
+      //   3,
+      //   3600, // 1 hour
+      // );
+      // if (!ipLimit.allowed) {
+      //   throw new ApiError(
+      //     429,
+      //     "Too many registration attempts from this IP. Please try again later.",
+      //   );
+      // }
 
       const emailLower = email.toLowerCase();
-      const emailLimit = await rateLimiter.checkFixedWindow(
-        `ratelimit:register:email:${emailLower}`,
-        1,
-        86400, // 24 hours
-      );
-      if (!emailLimit.allowed) {
-        throw new ApiError(
-          429,
-          "Registration limit exceeded for this email. Please try again tomorrow.",
-        );
-      }
+      // const emailLimit = await rateLimiter.checkFixedWindow(
+      //   `ratelimit:register:email:${emailLower}`,
+      //   1,
+      //   86400, // 24 hours
+      // );
+      // if (!emailLimit.allowed) {
+      //   throw new ApiError(
+      //     429,
+      //     "Registration limit exceeded for this email. Please try again tomorrow.",
+      //   );
+      // }
 
       // 2. Check if user exists
       const existingUser = await authRepository.findByEmail(emailLower);
@@ -133,32 +133,32 @@ class AuthService {
 
   async login({ email, password, ipAddress, userAgent }) {
     // 1. Rate Limiting
-    const ipLimit = await rateLimiter.checkSlidingWindow(
-      `ratelimit:login:ip:${ipAddress}`,
-      30,
-      900,
-    );
+    // const ipLimit = await rateLimiter.checkSlidingWindow(
+    //   `ratelimit:login:ip:${ipAddress}`,
+    //   30,
+    //   900,
+    // );
 
     const emailLower = email.toLowerCase();
-    const emailLimit = await rateLimiter.checkTokenBucket(
-      `ratelimit:login:email:${emailLower}`,
-      15,
-      0.0055,
-      900,
-    );
+    // const emailLimit = await rateLimiter.checkTokenBucket(
+    //   `ratelimit:login:email:${emailLower}`,
+    //   15,
+    //   0.0055,
+    //   900,
+    // );
 
-    const globalLimit = await rateLimiter.checkFixedWindow(
-      `ratelimit:login:global`,
-      10000,
-      60,
-    );
+    // const globalLimit = await rateLimiter.checkFixedWindow(
+    //   `ratelimit:login:global`,
+    //   10000,
+    //   60,
+    // );
 
-    if (ipLimit.count > 5 || !ipLimit.allowed) {
-      throw new ApiError(429, "Invalid credentials or too many attempts.");
-    }
-    if (!emailLimit.allowed || !globalLimit.allowed) {
-      throw new ApiError(429, "Invalid credentials or too many attempts.");
-    }
+    // if (ipLimit.count > 5 || !ipLimit.allowed) {
+    //   throw new ApiError(429, "Invalid credentials or too many attempts.");
+    // }
+    // if (!emailLimit.allowed || !globalLimit.allowed) {
+    //   throw new ApiError(429, "Invalid credentials or too many attempts.");
+    //}
 
     // 2. Find User & Check Locks
     const user = await authRepository.findByEmail(emailLower);
@@ -297,15 +297,15 @@ class AuthService {
       if (!tokenId || !tokenSecret) throw new Error("Invalid refresh token");
 
       // Rate limit
-      const refreshTokenLimit = await rateLimiter.checkTokenBucket(
-        `ratelimit:refresh:${tokenId}`,
-        10,
-        0.1667,
-        60,
-      );
-      if (!refreshTokenLimit.allowed) {
-        throw new ApiError(429, "Too many requests");
-      }
+      // const refreshTokenLimit = await rateLimiter.checkTokenBucket(
+      //   `ratelimit:refresh:${tokenId}`,
+      //   10,
+      //   0.1667,
+      //   60,
+      // );
+      // if (!refreshTokenLimit.allowed) {
+      //   throw new ApiError(429, "Too many requests");
+      // }
 
       // Lock
       const lockId = uuidv4();
@@ -519,21 +519,21 @@ class AuthService {
 
   async forgotPassword({ email, ipAddress }) {
     // Rate limits
-    const ipLimit = await rateLimiter.checkSlidingWindow(
-      `ratelimit:forgotPass:ip:${ipAddress}`,
-      10,
-      3600,
-    );
-    if (!ipLimit.allowed)
-      throw new ApiError(429, "Too many requests. Please try again later.");
+    // const ipLimit = await rateLimiter.checkSlidingWindow(
+    //   `ratelimit:forgotPass:ip:${ipAddress}`,
+    //   10,
+    //   3600,
+    // );
+    // if (!ipLimit.allowed)
+    // throw new ApiError(429, "Too many requests. Please try again later.");
 
-    const emailLimit = await rateLimiter.checkFixedWindow(
-      `ratelimit:forgotPass:email:${email}`,
-      3,
-      3600,
-    );
-    if (!emailLimit.allowed)
-      throw new ApiError(429, "Too many requests. Please try again later.");
+    // const emailLimit = await rateLimiter.checkFixedWindow(
+    //   `ratelimit:forgotPass:email:${email}`,
+    //   3,
+    //   3600,
+    // );
+    // if (!emailLimit.allowed)
+    // throw new ApiError(429, "Too many requests. Please try again later.");
 
     const user = await authRepository.findByEmail(email.toLowerCase());
     if (!user) {
@@ -585,12 +585,12 @@ class AuthService {
 
   async resetPassword({ token, password, ipAddress }) {
     // Rate limit
-    const ipLimit = await rateLimiter.checkSlidingWindow(
-      `ratelimit:resetPass:ip:${ipAddress}`,
-      10,
-      3600,
-    );
-    if (!ipLimit.allowed) throw new ApiError(429, "Too many requests.");
+    // const ipLimit = await rateLimiter.checkSlidingWindow(
+    //   `ratelimit:resetPass:ip:${ipAddress}`,
+    //   10,
+    //   3600,
+    // );
+    // if (!ipLimit.allowed) throw new ApiError(429, "Too many requests.");
 
     const tokenHash = crypto.createHash("sha256").update(token).digest("hex");
     const tokensUser =
