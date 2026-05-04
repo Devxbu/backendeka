@@ -164,21 +164,22 @@ class AuthService {
     const user = await authRepository.findByEmail(emailLower);
 
     if (user) {
-      // const lockedTtl = await authCacheService.checkAccountLock(user.userId);
-      // if (lockedTtl) {
-      //   throw new ApiError(
-      //     429,
-      //     "Account is temporarily locked due to multiple failed login attempts.",
-      //   );
-      // }
-      // if (user.lockUntil && user.lockUntil > Date.now()) {
-      //   const remainingTime = Math.ceil((user.lockUntil - Date.now()) / 1000);
-      //   await authCacheService.setAccountLocked(user.userId, remainingTime);
-      //   throw new ApiError(
-      //     429,
-      //     "Account is temporarily locked due to multiple failed login attempts.",
-      //   );
-      // }
+      const lockedTtl = await authCacheService.checkAccountLock(user.userId);
+      if (lockedTtl) {
+        throw new ApiError(
+          429,
+          "Account is temporarily locked due to multiple failed login attempts.",
+        );
+      }
+
+      if (user.lockUntil && user.lockUntil > Date.now()) {
+        const remainingTime = Math.ceil((user.lockUntil - Date.now()) / 1000);
+        await authCacheService.setAccountLocked(user.userId, remainingTime);
+        throw new ApiError(
+          429,
+          "Account is temporarily locked due to multiple failed login attempts.",
+        );
+      }
     }
 
     // 3. Verify Password
@@ -187,43 +188,43 @@ class AuthService {
     const passwordHash = user ? user.passwordHash : fakeHash;
     const isMatch = await bcrypt.compare(password, passwordHash);
 
-    // if (!isMatch) {
-    //   if (user) {
-    //     const attempts = await authRepository.incrementFailedLoginAttempts(
-    //       user.userId,
-    //     );
-    //     await authRepository.logLoginAttempt({
-    //       identifier: emailLower,
-    //       identifierType: "email",
-    //       ipAddress,
-    //       userAgent,
-    //       successful: false,
-    //       geolocation: null,
-    //     });
+    if (!isMatch) {
+      if (user) {
+        const attempts = await authRepository.incrementFailedLoginAttempts(
+          user.userId,
+        );
+        await authRepository.logLoginAttempt({
+          identifier: emailLower,
+          identifierType: "email",
+          ipAddress,
+          userAgent,
+          successful: false,
+          geolocation: null,
+        });
 
-    //     if (attempts >= 5) {
-    //       let lockDuration = 0;
-    //       if (attempts === 5) lockDuration = 15 * 60 * 1000;
-    //       else if (attempts === 6) lockDuration = 30 * 60 * 1000;
-    //       else if (attempts === 7) lockDuration = 60 * 60 * 1000;
-    //       else if (attempts === 8) lockDuration = 6 * 60 * 60 * 1000;
-    //       else lockDuration = 24 * 60 * 60 * 1000;
+        if (attempts >= 5) {
+          let lockDuration = 0;
+          if (attempts === 5) lockDuration = 15 * 60 * 1000;
+          else if (attempts === 6) lockDuration = 30 * 60 * 1000;
+          else if (attempts === 7) lockDuration = 60 * 60 * 1000;
+          else if (attempts === 8) lockDuration = 6 * 60 * 60 * 1000;
+          else lockDuration = 24 * 60 * 60 * 1000;
 
-    //       const lockUntil = new Date(Date.now() + lockDuration);
-    //       await authRepository.lockAccount(user.userId, lockUntil);
-    //       await authCacheService.setAccountLocked(
-    //         user.userId,
-    //         lockDuration / 1000,
-    //       );
+          const lockUntil = new Date(Date.now() + lockDuration);
+          await authRepository.lockAccount(user.userId, lockUntil);
+          await authCacheService.setAccountLocked(
+            user.userId,
+            lockDuration / 1000,
+          );
 
-    //       throw new ApiError(
-    //         429,
-    //         "Account is temporarily locked due to multiple failed login attempts.",
-    //       );
-    //     }
-    //   }
-    //   throw new ApiError(429, "Invalid credentials or too many attempts.");
-    // }
+          throw new ApiError(
+            429,
+            "Account is temporarily locked due to multiple failed login attempts.",
+          );
+        }
+      }
+      throw new ApiError(429, "Invalid credentials or too many attempts.");
+    }
 
     // 4. Successful Login
     // Reset failures
@@ -311,9 +312,9 @@ class AuthService {
       const lockKey = `lock:refresh:${tokenId}`;
       const hasLock = await authCacheService.acquireLock(lockKey, lockId, 5);
 
-      // if (!hasLock) {
-      //   throw new ApiError(429, "Too many requests");
-      // }
+      if (!hasLock) {
+        throw new ApiError(429, "Too many requests");
+      }
 
       try {
         // Blacklist Check
